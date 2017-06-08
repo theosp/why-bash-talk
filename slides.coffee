@@ -1,8 +1,6 @@
 @slides_contents = [
   """
-    <h2 style="text-transform: none">Understanding Javascript</h2>
-    <cite>"The World's Most Misunderstood Programming Language" <small>D. Crockford</small></cite>
-    <br><br>
+    <h2 style="text-transform: none">Why Bash?</h2>
     <small>by</small><br>
     <b><i>Daniel Chcouri</i></b><br />
     <b><i>github: @theosp</i></b><br /><br />
@@ -10,185 +8,206 @@
   """
 
   """
-    <h3 style="text-transform: none">Concepts covered:</h3>
+    <h3 style="text-transform: none">Scope:</h3>
 
     <ul>
-      <li>Event loop - How JS Runs Code</li>
-      <li>Closures - How Variables Names Work in JS</li>
-      <li>this - What is it, and how it works</li>
+      <li>What makes a good language?</li>
+      <li>Why Bash?</li>
+      <li>Learning Bash</li>
     </ul>
   """
 
   """
-      <h3 style="text-transform: none">The Event Loop - How JS Runs Code</h3>
+      <h3 style="text-transform: none">What makes a good language?</h3>
+
+      <ol>
+        <li>Good fit for the problem we try to solve</li>
+        <li>Ubiquity</li>
+      </ol>
   """
 
   """
-      <h3 style="text-transform: none">The Event Loop - Example 1</h3>
-
-      <iframe height='500' scrolling='no' src='//codepen.io/theosp/embed/jryWEO/?height=500&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/theosp/pen/begpRq/'>Understanding JS - EventLoop 2</a> by Daniel Chcouri (<a href='http://codepen.io/theosp'>@theosp</a>) on <a href='http://codepen.io'>CodePen</a>.
-      </iframe>
+      <h3 style="text-transform: none">1. Good fit for the problem we try to solve</h3>
   """
 
   """
-      <h3 style="text-transform: none">The Event Loop - Example 2</h3>
+      <h3 style="text-transform: none">Example 1 - Data Analysis</h3>
 
-      <iframe height='400' scrolling='no' src='//codepen.io/theosp/embed/KMaMMr/?height=400&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/theosp/pen/KMaMMr/'>Understanding JS - EventLoop 2</a> by Daniel Chcouri (<a href='http://codepen.io/theosp'>@theosp</a>) on <a href='http://codepen.io'>CodePen</a>.
-      </iframe>
+      <img src="/img/data-analysis-slide-1.png" style="border: 0 none;">
   """
 
   """
-      <h3 style="text-transform: none">The Event Loop - Example 1 - Explained</h3>
+      <h3 style="text-transform: none">Example 1 - Data Analysis</h3>
 
-      <iframe height='500' scrolling='no' src='//codepen.io/theosp/embed/jryWEO/?height=500&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/theosp/pen/begpRq/'>Understanding JS - EventLoop 2</a> by Daniel Chcouri (<a href='http://codepen.io/theosp'>@theosp</a>) on <a href='http://codepen.io'>CodePen</a>.
-      </iframe>
+      <img src="/img/data-analysis-slide-2.png" style="border: 0 none;">
   """
 
   """
-      <h3 style="text-transform: none">JS is single threaded - <b>only one piece of code runs in any given moment</b></h3>
+      <h3 style="text-transform: none">Example 1 - Data Analysis</h3>
 
-      <img src="/img/event_loop_e1_d1.png" style="border: 0 none;">
-  """
-
-
-  """
-      <h3 style="text-transform: none">While js is processing code, events are queued in the events queue</b></h3>
-
-      <img src="/img/event_loop_e1_d2.png" style="border: 0 none;">
-  """
-
-
-  """
-      <h3 style="text-transform: none">As long as a certain code keeps running it blocks the events queue</b></h3>
-
-      <img src="/img/event_loop_e1_d3.png" style="border: 0 none;">
+      <img src="/img/data-analysis-slide-3.png" style="border: 0 none;">
   """
 
   """
-      <h3 style="text-transform: none">The Event Loop process</h3>
+      <h3 style="text-transform: none">Example 2 - Machine Learning</h3>
+
+      The following <b>Octave</b> one liner is what it takes to separate 2 songs recorded
+      on the same mp3 file to two separate mp3 files. <br />
+
+      <img src="/img/machine-learning.png" style="border: 0 none;">
+
+  """
+
+  """
+      <h3 style="text-transform: none">Example 3 - Text processing</h3>
+
+      The following Regex with its 21 charecters will make sure a password has:<br />
 
       <ul>
-        <li>Once the processing of code is completed, the <b>Event Loop</b> takes the next event from the queue and calls its handler.</li>
+        <li>Only: Lower/Upper-cased English Charecters and the signs: - and _</li>
+        <li>Minimum of: 6 Charecters</li>
+        <li>Up to: 12 Charecters</li>
       </ul>
 
-      <img src="/img/event-loop.png" style="border: 0 none;">
+      <img src="/img/regex.png" style="border: 0 none;">
   """
 
   """
-      <h3 style="text-transform: none">The Event Loop - Example 2 - Explained</h3>
+      <h3 style="text-transform: none">Example 4 - Text formatting</h3>
 
-      <iframe height='400' scrolling='no' src='//codepen.io/theosp/embed/KMaMMr/?height=400&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/theosp/pen/KMaMMr/'>Understanding JS - EventLoop 2</a> by Daniel Chcouri (<a href='http://codepen.io/theosp'>@theosp</a>) on <a href='http://codepen.io'>CodePen</a>.
-      </iframe>
+      It's not all about programming languages - check this Markdown
+      code - nice formatting for humans - easy for computers parsing:
+
+      <img src="/img/markdown.png" style="border: 0 none;">
   """
 
   """
-      <h3 style="text-transform: none">Event Loop - Learn More</h3>
+      <h3 style="text-transform: none">Ubiquity</h3>
+
+      <img src="/img/ubiquity.png" style="border: 0 none;">
+  """
+
+  """
+      <h3 style="text-transform: none">Example: Javascipt</h3>
 
       <ul>
-        <li>https://goo.gl/sDG9uM - <a href="https://goo.gl/sDG9uM">Philip Roberts: What the heck is the event loop anyway? | JSConf EU 2014</a></li>
-        <li>https://goo.gl/p1qbN3 - <a href="https://goo.gl/p1qbN3">MDN - Concurrency model and Event Loop</a></li>
+        <li>Core part of any web browser shipped with it (Netscape 2.0, 1995; ie 3.0, 1996)</li>
       </ul>
 
-      <img src="/img/event-loop.png" style="border: 0 none;">
+      <br /><br />
+
+      Note: NodeJS opened the gate for server side JS and uses that goes beyond web-development - but installation still required - so not exactly falls into Ubiquity
   """
 
   """
-      <h3 style="text-transform: none">Closures - How Variables Names Work in JS</h3>
+      <h3 style="text-transform: none">Why Ubiquity Matters?</h3>
   """
 
   """
-      <h3 style="text-transform: none">Closures - Example 1</h3>
+      <h3 style="text-transform: none">Easy software distribution</h3>
 
-      <iframe height='500' scrolling='no' src='//codepen.io/theosp/embed/pbRbLm/?height=500&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/theosp/pen/begpRq/'>Understanding JS - EventLoop 2</a> by Daniel Chcouri (<a href='http://codepen.io/theosp'>@theosp</a>) on <a href='http://codepen.io'>CodePen</a>.
-      </iframe>
-  """
-
-  """
-      <h3 style="text-transform: none">Closures - Example 1 - Take 2</h3>
-
-      <iframe height='500' scrolling='no' src='//codepen.io/theosp/embed/begqEy/?height=500&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/theosp/pen/begpRq/'>Understanding JS - EventLoop 2</a> by Daniel Chcouri (<a href='http://codepen.io/theosp'>@theosp</a>) on <a href='http://codepen.io'>CodePen</a>.
-      </iframe>
-  """
-
-  """
-      <h3 style="text-transform: none">Closures - Explained</h3>
+      <div>Try to think which of the following languages increase the chance your non tech-savvy
+      friends will be able to use a tool you send them:</div>
 
       <ul>
-        <li>Variables names in JS refer to their declaration in the closer enclosing function in which they are:</li>
-        <ul>
-          <li>Defined with var</li>
-          <li>Arguments of the function</li>
-        </ul>
+        <li>Ruby</li>
+        <li>Python</li>
+        <li>Scala</li>
+        <li>Java</li>
+        <li>JavaScript</li>
+      </ul>
+  """
+
+  """
+      <h3 style="text-transform: none">Makes your knowledge more valuable</h3>
+
+      <ul>
+        <li>Vim: a ubiquitous text-editor, will let you work remotely on virtually any Unix/Mac machine (almost safe to say: no matter how old)</li>
+        <li>Regex: Learning regex is very valuable since you can use it in many languages and tools</li>
+      </ul>
+  """
+
+  """
+      <h3 style="text-transform: none">Other reasons</h3>
+
+      <ul>
+        <li>Lower entry barrier for new developers</li>
+        <li>Increase the chance someone wrote a library/tool you find necessary during development</li>
+        <li>Increase the chance tools to help development are out there. From syntax highlighting in your favorite editor to debuggers.</li>
+      </ul>
+  """
+
+  """
+      <h3 style="text-transform: none">Why Bash?</h3>
+  """
+
+  """
+      <h3 style="text-transform: none">Ubiquity - Bash is the JavaScript of the shell world</h3>
+
+      <ul>
+        <li>The shell language of choice for all popular Linux distribution</li>
+        <li>The shell language of choice on Macs</li>
+        <li>Now available on Windows 10 (!)</li>
       </ul>
 
-      <br><br>
-
-      <cite>
-        "Closures are functions that refer to independent (free) variables (variables that are used locally, but defined in an enclosing scope). In other words, these functions 'remember' the environment in which they were created."
-      </cite> <small>MDN definition to Closures</small>
+      <br><br><a href="https://askubuntu.com/questions/638918/why-is-bash-the-default-shell-in-most-os" target="_blank">Relevant ServerFault discussion</a>: http://bit.ly/2sVrNoh
   """
 
   """
-      <h3 style="text-transform: none">Closures - Explained</h3>
+      <h3 style="text-transform: none">Bash langauge is a great shell language</h3>
 
-      <iframe height='430' scrolling='no' src='//codepen.io/theosp/embed/WxRpYw/?height=406&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/theosp/pen/WxRpYw/'>Understanding JS - Closures Explained</a> by Daniel Chcouri (<a href='http://codepen.io/theosp'>@theosp</a>) on <a href='http://codepen.io'>CodePen</a>.
-      </iframe>
+      The term shell means any program that users employ to type commands.<br>
+      We usually use operating systems command shells to:
+
+      <ul>
+        <li>Invoke programs and process their output</li>
+        <li>Tools for text processing for programs output processing</li>
+        <li>Query and manage the filesystem</li>
+      </ul>
   """
 
   """
-      <h3 style="text-transform: none">Closures - Example 1 - Take 3</h3>
-
-      <iframe height='500' scrolling='no' src='//codepen.io/theosp/embed/JKEWmZ/?height=500&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/theosp/pen/begpRq/'>Understanding JS - EventLoop 2</a> by Daniel Chcouri (<a href='http://codepen.io/theosp'>@theosp</a>) on <a href='http://codepen.io'>CodePen</a>.
-      </iframe>
+  Examples begin here.
   """
 
   """
-      <h3 style="text-transform: none">this - What is it, and how it works</h3>
+      <h3 style="text-transform: none">Learning Bash</h3>
   """
 
   """
-      <h3 style="text-transform: none">this - Example 1</h3>
+      <h3 style="text-transform: none">Learning Bash - DO</h3>
 
-      <iframe height='402' scrolling='no' src='//codepen.io/theosp/embed/WxRjGp/?height=402&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/theosp/pen/NrdjKr/'>Understanding JS - this 1</a> by Daniel Chcouri (<a href='http://codepen.io/theosp'>@theosp</a>) on <a href='http://codepen.io'>CodePen</a>.
-      </iframe>
+      <ul>
+        <li><a href="http://mywiki.wooledge.org/" target="_blank">Greg's Wiki</a> (http://bit.ly/2r3QNNv), in particular the
+          <ul>
+            <li>Bash FAQ</li>
+            <li>Bash Pitfalls</li>
+            <li>Bash Guide</li>
+          </ul>
+        </li>
+        <li>The Bash Hackers Wiki</li>
+        <li>Use the `help` command to learn about bash builtin commands</li>
+        <li>Use the `man` command for manuals in general</li>
+      </ul>
   """
 
   """
-      <h3 style="text-transform: none">Who is this - simple call</h3>
+      <h3 style="text-transform: none">Learning Bash - DON'T</h3>
 
-      <iframe height='500' scrolling='no' src='//codepen.io/theosp/embed/NrdjKr/?height=500&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/theosp/pen/begpRq/'>Understanding JS - EventLoop 2</a> by Daniel Chcouri (<a href='http://codepen.io/theosp'>@theosp</a>) on <a href='http://codepen.io'>CodePen</a>.
-      </iframe>
-
-      <small>Example taken from MDN</small>
+      <ul>
+        <li>Don't learn from TLDP (tldp.org) (<a href="http://wiki.bash-hackers.org/scripting/tutoriallist#bash_programming_introduction_howto" target="_blank">discussion can be found here</a>: http://bit.ly/2r87YbT)
+          <ul>
+            <li>Has syntax errors</li>
+            <li>Uses uncommon syntax</li>
+            <li>Example codes use bad practices - likely to be buggy</li>
+          </ul>
+        </li>
+        <li>Don't give up!</li>
+      </ul>
   """
 
   """
-      <h3 style="text-transform: none">Who is this - method call</h3>
-
-      <iframe height='500' scrolling='no' src='//codepen.io/theosp/embed/NrdjNb/?height=500&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/theosp/pen/begpRq/'>Understanding JS - EventLoop 2</a> by Daniel Chcouri (<a href='http://codepen.io/theosp'>@theosp</a>) on <a href='http://codepen.io'>CodePen</a>.
-      </iframe>
-
-      <small>Example taken from MDN</small>
-  """
-
-  """
-      <h3 style="text-transform: none">Who is this - constructor call</h3>
-
-      <iframe height='402' scrolling='no' src='//codepen.io/theosp/embed/begWeB/?height=402&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/theosp/pen/NrdjKr/'>Understanding JS - this 1</a> by Daniel Chcouri (<a href='http://codepen.io/theosp'>@theosp</a>) on <a href='http://codepen.io'>CodePen</a>.
-      </iframe>
-  """
-
-  """
-      <h3 style="text-transform: none">this - Example 1 - Take 2</h3>
-
-      <iframe height='500' scrolling='no' src='//codepen.io/theosp/embed/pbRPNW/?height=500&theme-id=0&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/theosp/pen/begpRq/'>Understanding JS - EventLoop 2</a> by Daniel Chcouri (<a href='http://codepen.io/theosp'>@theosp</a>) on <a href='http://codepen.io'>CodePen</a>.
-      </iframe>
-  """
-
-  """
-    <h2 style="text-transform: none">Understanding Javascript</h2>
-    <cite>"The World's Most Misunderstood Programming Language" <small>D. Crockford</small></cite>
-    <br><br>
+    <h2 style="text-transform: none">Why Bash?</h2>
     <small>by</small><br>
     <b><i>Daniel Chcouri</i></b><br />
     <b><i>github: @theosp</i></b><br /><br />
