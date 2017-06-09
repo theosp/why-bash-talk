@@ -76,7 +76,7 @@
       <h3 style="text-transform: none">Example 4 - Text formatting</h3>
 
       It's not all about programming languages - check this Markdown
-      code - nice formatting for humans - easy for computers parsing:
+      code - nice formatting for humans - easy for computers to parse:
 
       <img src="/img/markdown.png" style="border: 0 none;">
   """
@@ -91,12 +91,12 @@
       <h3 style="text-transform: none">Example: Javascipt</h3>
 
       <ul>
-        <li>Core part of any web browser shipped with it (Netscape 2.0, 1995; ie 3.0, 1996)</li>
+        <li>Core part of any web browser (Netscape 2.0, 1995; ie 3.0, 1996)</li>
       </ul>
 
       <br /><br />
 
-      Note: NodeJS opened the gate for server side JS and uses that goes beyond web-development - but installation still required - so not exactly falls into Ubiquity
+      Note: NodeJS opened the gate for server side JS and uses that go beyond web-development - but installation still required - does not exactly fall under Ubiquity
   """
 
   """
@@ -114,7 +114,8 @@
         <li>Python</li>
         <li>Scala</li>
         <li>Java</li>
-        <li>JavaScript</li>
+        <li>C</li>
+        <li>JavaScript (browser)</li>
       </ul>
   """
 
@@ -128,7 +129,7 @@
   """
 
   """
-      <h3 style="text-transform: none">Other reasons</h3>
+      <h3 style="text-transform: none">More reasons</h3>
 
       <ul>
         <li>Lower entry barrier for new developers</li>
