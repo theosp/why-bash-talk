@@ -162,13 +162,170 @@
 
       <ul>
         <li>Invoke programs and process their output</li>
-        <li>Tools for text processing for programs output processing</li>
         <li>Query and manage the filesystem</li>
+        <li>Text processing</li>
       </ul>
   """
 
   """
-  Examples begin here.
+      <h3 style="text-transform: none">Some very basic examples</h3>
+
+      <p>The following examples only scratch the surface of the Bash language capabilities</p>
+  """
+
+  """
+      <h3 style="text-transform: none">Invoke programs and process their output</h3>
+  """
+
+  """
+      <h3 style="text-transform: none">input/output - pipes</h3>
+
+      Number processes run under the root user:
+
+      <pre>ps aux <span class="subject">|</span> grep root <span class="subject">|</span> wc -l</pre>
+  """
+
+  """
+      <h3 style="text-transform: none">input/output - file content</h3>
+
+      The following code will set 2017-06-10.log as the input to grep that
+      will print all the lines with the word SUCCESS which wc -l will count.
+
+      <pre>grep SUCCESS <span class="subject">&lt;</span> 2017-06-10.log | wc -l</pre>
+
+      Note: grep can get the input file as an argument. The example doesn't use this feature
+      to demonstrate the general standard input control syntax in Bash.
+  """
+
+  """
+      <h3 style="text-transform: none">input/output - Temporary files</h3>
+
+      <p>Compare a url to its previous version</p>
+
+      One line:
+      <pre>
+      diff previous.html <span class="subject">&lt;(</span> curl "$url" <span class="subject">)</span>
+      </pre>
+  """
+
+  """
+      <h3 style="text-transform: none">input/output - save to file</h3>
+
+      <p>Save linux.org to file.</p>
+
+      <pre>curl "https://www.linux.org/" <span class="subject">&gt;</span> linux-org.html</pre>
+  """
+
+  """
+      <h3 style="text-transform: none">input/output - append output to file</h3>
+
+      <p>Save the current public IP to a list with public IPs history.</p>
+
+      <pre>curl "https://ipinfo.io/ip" <span class="subject">&gt;</span><span class="subject">&gt;</span> ip-history.txt</pre>
+  """
+
+  """
+      <h3 style="text-transform: none">Invoke - Run a background process - wait for its completion (async)</h3>
+
+      Same example as the previous, a bit more user friendly.
+
+      <pre>
+      curl "https://ipinfo.io/ip" &gt;&gt; history.txt <span class="subject">&amp;</span>
+      echo "Waiting ipinfo.io"
+      <span class="subject">wait</span>
+      echo "Done"
+      </pre>
+  """
+
+  """
+      <h3 style="text-transform: none">Invoke - Control flows</h3>
+
+      <pre class="small">
+      sudo apt-get update <span class="subject">&&</span> sudo apt-get install gimp
+      </pre>
+
+      <pre class="small">
+      <span class="subject">if !</span> curl "https://ipinfo.io/ip" &gt;&gt; history.txt<span class="subject">; then</span>
+        echo "Failed"
+      <span class="subject">fi</span>
+      </pre>
+  """
+
+  """
+      <h3 style="text-transform: none">Query and manage the filesystem</h3>
+
+      <p>Queries on the filesystem are a core feature of Bash</p>
+  """
+
+  """
+      <h3 style="text-transform: none">Filesystem - Path exists</h3>
+
+      <pre>
+        exists () {
+          # Gets a path as first argument and print
+          # a message telling whether exists or not
+
+          local path="$1"
+
+          if <span class="subject">[[ -e "$path" ]]</span>; then
+            echo "Exists"
+          else
+            echo "Doesn't exist"
+          fi
+        }
+
+        exists "/path/to/file"
+      </pre>
+  """
+
+  """
+      <h3 style="text-transform: none">Filesystem - File not empty</h3>
+
+      <pre>
+        existsAndNotEmpty () {
+          # Gets a path as first argument and print
+          # a message telling whether exists and not
+          # empty
+
+          local path="$1"
+
+          if [[ <span class="subject">-s</span> "$path" ]]; then
+            echo "Exists and not empty"
+          else
+            echo "Doesn't exist or empty"
+          fi
+        }
+
+        existsAndNotEmpty "/path/to/file"
+      </pre>
+  """
+
+  """
+      <h3 style="text-transform: none">Filesystem - Is a directory</h3>
+
+      <pre>
+        isDir () {
+          local path="$1"
+
+          if [[ <span class="subject">-d</span> "$path" ]]; then
+            echo "Directory"
+          else
+            echo "Not a Directory"
+          fi
+        }
+
+        isDir "/path/to/file"
+      </pre>
+  """
+
+  """
+      <h3 style="text-transform: none">Filesystem</h3>
+
+      To learn about many other file queries operators
+
+      <pre>
+        <span class="subject">help test</span>
+      </pre>
   """
 
   """
