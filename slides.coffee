@@ -202,7 +202,8 @@
 
       <p>Compare a url to its previous version</p>
 
-      One line:
+      <code>&lt;( )</code> creates a temporary file with the output of the command inside it.
+
       <pre>
       diff previous.html <span class="subject">&lt;(</span> curl "$url" <span class="subject">)</span>
       </pre>
@@ -326,6 +327,18 @@
       <pre>
         <span class="subject">help test</span>
       </pre>
+  """
+
+  """
+      <h3 style="text-transform: none">Other powerful capabilities | if time permits</h3>
+
+      <ul>
+        <li>Control over processes output types</li>
+        <li>Environmental variables management</li>
+        <li>Subshells - and how they interact with variables</li>
+        <li>Loops</li>
+        <li>Arrays</li>
+      </ul>
   """
 
   """
