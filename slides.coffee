@@ -129,16 +129,6 @@
   """
 
   """
-      <h3 style="text-transform: none">More reasons</h3>
-
-      <ul>
-        <li>Lower entry barrier for new developers</li>
-        <li>Increase the chance someone wrote a library/tool you find necessary during development</li>
-        <li>Increase the chance tools to help development are out there. From syntax highlighting in your favorite editor to debuggers.</li>
-      </ul>
-  """
-
-  """
       <h3 style="text-transform: none">Why Bash?</h3>
   """
 
