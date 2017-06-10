@@ -330,7 +330,26 @@
   """
 
   """
-      <h3 style="text-transform: none">Other powerful capabilities | if time permits</h3>
+      <h3 style="text-transform: none">Text Processing - Parameter Expansion</h3>
+
+      <pre class="small">
+        isCompressedFile () {
+          file="$1"
+          file_ext="<span class="subject">${file##*.}"</span>
+          if [[ <span class="subject">"$file_ext" =~ (bz2|gz|zip|z7|rar)</span> ]]; then
+            echo "File has a compressed file extension"
+          else
+            echo "File doesn't have compressed file extension"
+          fi
+        }
+        isCompressedFile "results.tar.bz2"
+      </pre>
+
+      <a href="http://wiki.bash-hackers.org/syntax/pe" target="_blank">Find here a comprehensive list of Parameter Expansion</a> (http://bit.ly/2sdFrH5)
+  """
+
+  """
+      <h3 style="text-transform: none">Other powerful capabilities - if time permits</h3>
 
       <ul>
         <li>Control over processes output types</li>
